@@ -6,7 +6,7 @@ Code points where you solution is to be located are marked with TODOs.
 The solution is to be written using Java version greater than 1.8, external libraries are forbidden. 
 You can add dependencies with scope "test" if it's needed to write new unit-tests.
 
-The exam includes 5 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyramid](/tasks/Pyramid.md), [CurrencyConverter](/tasks/CurrencyConverter.md), [Spreadsheet](/tasks/Spreadsheet.md) and 
+The exam includes 3 tasks to be done. Please, choose 3 of 5: [Calculator](/tasks/Calculator.md), [Pyramid](/tasks/Pyramid.md), [CurrencyConverter](/tasks/CurrencyConverter.md), [Spreadsheet](/tasks/Spreadsheet.md) and 
 [Subsequence](/tasks/Subsequence.md)
 
 ### Result ###
@@ -22,6 +22,15 @@ The exam includes 5 tasks to be done: [Calculator](/tasks/Calculator.md), [Pyram
 
 ### How can I submit the result?  ###
 
+* You need to do 3 tasks out of 5, so you need to mark the 2 test classes with the annotation @Ignore to exclude them. This is the only change you can make to the test classes. Do not modify class methods. Example for excluding Calculator task: 
+```java
+import org.junit.Ignore;
+
+@Ignore
+public class CalculatorTest {
+   ...
+}
+```
 * Make sure your code can be built and all tests are green (example command: "mvn clean install")
 * Commit and push all changes to your repository
 * Configure the [Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/get-started-with-bitbucket-pipelines/) to deploy your maven project(use maven template for creating your pipelines) 
